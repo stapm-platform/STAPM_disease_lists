@@ -1,0 +1,14 @@
+# Generated Word documents (regenerate from the CSV with scripts/build_word_document.R)
+output/*.docx
+
+# R session / editor cruft
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+.DS_Store
+
+# rmarkdown intermediates
+*_files/
+*_cache/

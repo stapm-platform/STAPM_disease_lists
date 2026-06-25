@@ -1,0 +1,94 @@
+---
+title: "STAPM Disease List"
+subtitle: "`r params$list_version`"
+date: "Generated `r format(Sys.Date(), '%d %B %Y')`"
+output:
+  word_document:
+    toc: true
+    toc_depth: 1
+params:
+  list_file: "lists/stapm_disease_list_v2.0.0.csv"
+  list_version: "v2.0.0"
+  show_overlaps: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(flextable)
+library(officer)
+source("R/disease_list.R")
+
+df <- read_disease_list(params$list_file)
+
+# Preserve the order groups first appear in the file.
+df[["disease_type"]] <- factor(df[["disease_type"]],
+                               levels = unique(df[["disease_type"]]))
+
+yn <- function(v) ifelse(toupper(trimws(v)) == "X", "Yes", "")
+
+set_flextable_defaults(font.family = "Calibri", font.size = 9, padding = 3)
+```
+
+This document is generated automatically from
+`r basename(params$list_file)`. Do not edit it by hand - edit the source CSV and
+re-render.
+
+It lists **`r nrow(df)`** conditions across **`r nlevels(df[["disease_type"]])`**
+groups: **`r sum(toupper(trimws(df[["tobacco-related"]])) == "X")`** tobacco-related
+and **`r sum(toupper(trimws(df[["alcohol-related"]])) == "X")`** alcohol-related.
+
+```{r groups, results='asis'}
+for (g in levels(df[["disease_type"]])) {
+  sub <- df[df[["disease_type"]] == g, , drop = FALSE]
+  cat("\n\n#", g, "\n\n")
+
+  tbl <- data.frame(
+    Disease        = sub[["Disease category name"]],
+    `ICD-10 codes` = sub[["ICD-10 codes"]],
+    Tobacco        = yn(sub[["tobacco-related"]]),
+    Alcohol        = yn(sub[["alcohol-related"]]),
+    check.names    = FALSE,
+    stringsAsFactors = FALSE
+  )
+
+  ft <- flextable(tbl)
+  ft <- theme_booktabs(ft)
+  ft <- bold(ft, part = "header")
+  ft <- align(ft, j = c("Tobacco", "Alcohol"), align = "center", part = "all")
+  ft <- valign(ft, valign = "top", part = "body")
+  ft <- width(ft, j = "Disease", width = 2.4)
+  ft <- width(ft, j = "ICD-10 codes", width = 3.0)
+  ft <- width(ft, j = c("Tobacco", "Alcohol"), width = 0.7)
+  ft <- fontsize(ft, size = 9, part = "all")
+  flextable_to_rmd(ft)
+  cat("\n\n")
+}
+```
+
+# Notes on ICD-10 coding
+
+- Codes are written without the decimal point (e.g. `F502` = F50.2).
+- A three-character code covers the whole block (e.g. `C50` = C50.0-C50.9).
+- An `(excluding XXX)` clause carves codes out of a category.
+- An `X` suffix (e.g. `K85X`) denotes the source data's unspecified
+  fourth-character convention.
+
+```{r overlaps, results='asis', eval=params$show_overlaps}
+ov <- find_overlaps(df)
+cat("\n\n# Data quality check\n\n")
+if (nrow(ov) == 0) {
+  cat("No overlapping ICD-10 codes were detected between conditions.\n")
+} else {
+  cat("The following conditions share ICD-10 codes",
+      "(a record could be counted under either):\n\n")
+  oft <- flextable(ov)
+  oft <- set_header_labels(oft,
+    disease_a = "Condition A", disease_b = "Condition B",
+    shared_codes = "Shared codes")
+  oft <- theme_booktabs(oft)
+  oft <- bold(oft, part = "header")
+  oft <- width(oft, j = c("disease_a","disease_b"), width = 2.4)
+  oft <- width(oft, j = "shared_codes", width = 1.5)
+  flextable_to_rmd(oft)
+}
+```

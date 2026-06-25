@@ -1,0 +1,95 @@
+tobacco-related,alcohol-related,disease_type,Disease category name,ICD-10 codes
+x,x,Cancers,Oral cavity cancer,"C00,C01,C02,C03,C04,C05,C06"
+x,x,Cancers,Pharyngeal cancer,"C09,C10,C12,C13,C14"
+x,,Cancers,Nasopharynx & sinonasal cancer,"C11,C30,C31"
+x,x,Cancers,Oesophageal cancer,C15
+x,,Cancers,Stomach cancer,C16
+x,x,Cancers,Colorectal cancer,"C18,C19,C20"
+x,x,Cancers,Cancer of the liver and intrahepatic bile ducts,C22
+x,x,Cancers,Pancreatic cancer,C25
+x,x,Cancers,Laryngeal cancer,C32
+x,,Cancers,Lung cancer,"C33,C34"
+x,,Cancers,Malignant_melanoma,"C43,C44"
+,x,Cancers,Breast cancer,C50
+x,,Cancers,Cervical cancer,C53
+x,,Cancers,Kidney cancer,C64
+x,,Cancers,Lower urinary tract cancer,"C65,C66"
+x,,Cancers,Bladder cancer,C67
+x,,Cancers,Acute myeloid leukaemia,C92
+,x,Cardiovascular,Cardiomyopathy,"A395,B332,D868,I40,I42,I43,I514,I515 (excluding I426)"
+,x,Cardiovascular,Hypertensive diseases,"I10,I11,I12,I13,I14"
+x,x,Cardiovascular,Ischaemic heart disease,"I20,I21,I22,I23,I24,I25"
+x,,Cardiovascular,Venous thromboembolism,"I26,I80,I81,I82"
+,x,Cardiovascular,Cardiac arrhythmias,"I47,I48,I49"
+x,x,Cardiovascular,Haemorrhagic stroke,"I60,I61,I62"
+x,x,Cardiovascular,Ischaemic stroke,"I63,I64,I65,I66,I67"
+x,,Cardiovascular,Abdominal aortic aneurysm,I71
+x,,Cardiovascular,Peripheral arterial disease,I739
+,x,Mental health,Other_alzheimers,"F00,G311,G318,G319"
+x,,Mental health,Vascular dementia,F01
+x,,Mental health,All-cause dementia,"F02,F03"
+x,,Mental health,Schizophrenia,"F20,F21,F22,F23,F24,F25"
+x,,Mental health,Psychosis,"F28,F29"
+x,,Mental health,Depression,"F32,F33"
+x,,Mental health,Bulimia,F502
+x,x,Mental health,Alzheimers_disease,G30
+,x,Other,Tuberculosis,"A15,A16,A17,A18,A19"
+x,x,Other,Diabetes (type II),E11
+x,,Other,Parkinson's disease,G20
+x,,Other,Multiple sclerosis,G35
+,x,Other,Epilepsy and status epilepticus,"G40,G41"
+x,,Other,Senile cataract,H25
+x,,Other,Age-related macular degeneration,"H353,H354,H355,H356,H357,H358,H359,H36,H40,H41,H42,H43,H44,H45,H46,H47,H48,H49,H50,H51,H520,H521,H522,H523,H524"
+x,,Other,Hearing loss,"H90,H91"
+x,,Other,Peptic ulcer disease,"K25,K26,K27,K28,K920,K921,K922"
+x,,Other,Crohn's disease,K50
+x,,Other,Ulcerative colitis,K51
+,x,Other,Cirrhosis of the liver (excluding alcoholic liver disease),"K705,K706,K707,K708,K73,K74"
+x,,Other,Gallbladder diseases,"K80,K81,K82,K83,K87"
+,x,Other,Acute pancreatitis,"K850,K851,K854,K855,K856,K857,K858,K859,K85X"
+,x,Other,Chronic pancreatitis,"K861,K862,K863,K864,K865,K866,K867,K868,K869,K86X"
+x,,Other,Psoriasis,L40
+x,,Other,Rheumatoid arthritis,"M05,M06"
+x,,Other,Systematic lupus erythematosis,M32
+x,,Other,Low back pain,M54
+x,,Other,Chronic kidney disease,"N181,N182,N183,N184,N188,N189"
+x,,Other,End-stage renal disease,"N185,N180"
+x,,Other,Hip fracture,"S720,S721,S722"
+,x,Partially-attributable acute,Other sexually transmitted diseases,"A50,A51,A52,A53,A54,A55,A56,A57,A58,A60,A63,B63,I980,K670,K671,K672,M031,M730,M731,N70,N71,N73,N74"
+,x,Partially-attributable acute,HIV/AIDS,"B20,B21,B22,B23,B24"
+,x,Partially-attributable acute,Transport injuries,"V01,V02,V03,V04,V05,V06,V07,V08,V09,V10,V11,V12,V13,V14,V15,V16,V17,V18,V19,V20,V21,V22,V23,V24,V25,V26,V27,V28,V29,V30,V31,V32,V33,V34,V35,V36,V37,V38,V39,V40,V41,V42,V43,V44,V45,V46,V47,V48,V49,V50,V51,V52,V53,V54,V55,V56,V57,V58,V59,V60,V61,V62,V63,V64,V65,V66,V67,V68,V69,V70,V71,V72,V73,V74,V75,V76,V77,V78,V79,V80,V81,V82,V83,V84,V85,V86,V87,V88,V89,V90,V91,V92,V93,V94,V95,V96,V97,V98,Y850"
+,x,Partially-attributable acute,Fall injuries,"W00,W01,W02,W03,W04,W05,W06,W07,W08,W09,W10,W11,W12,W13,W14,W15,W16,W17,W18,W19"
+,x,Partially-attributable acute,Exposure to mechanical forces (including machinery accidents),"W20,W21,W22,W23,W24,W25,W26,W27,W28,W29,W30,W31,W32,W33,W34,W35,W36,W37,W38,W39,W40,W41,W42,W43,W44,W45,W46,W47,W48,W49,W50,W51,W52"
+,x,Partially-attributable acute,Drowning,"W65,W66,W67,W68,W69,W70,W71,W72,W73,W74,Y21"
+,x,Partially-attributable acute,Other unintentional injuries,"W75,W76,W77,W78,W79,W80,W81,W82,W83,W84,W85,W86,W87,W88,W89,W90,W91,W92,W93,W94,W95,W96,W97,W98,W99,X10,X11,X12,X13,X14,X15,X16,X17,X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29,X30,X31,X32,X33,Y20,Y22,Y23,Y24,Y25,Y27,Y28,Y29,Y31,Y32,Y33,Y34"
+x,x,Partially-attributable acute,Fire injuries,"X00,X01,X02,X03,X04,X05,X06,X07,X08,X09,Y26"
+,x,Partially-attributable acute,Accidental poisoning by exposure to noxious substances,"X40,X41,X42,X43,X44,X46,X47,X48,X49,Y10,Y11,Y12,Y13,Y14,Y16,Y17,Y18,Y19,T36,T37,T38,T39,T40,T41,T42,T43,T44,T45,T46,T47,T48,T49,T50,T52,T53,T54,T55,T56,T57,T58,T59,T60,T61,T62,T63,T64,T65 (excluding T652)"
+,x,Partially-attributable acute,Intentional self-harm,"X60,X61,X62,X63,X64,X66,X67,X68,X69,X70,X71,X72,X73,X74,X75,X76,X77,X78,X79,X80,X81,X82,X83,X84,Y870"
+,x,Partially-attributable acute,Assault,"X85,X86,X87,X88,X89,X90,X91,X92,X93,X94,X95,X96,X97,X98,X99,Y00,Y01,Y02,Y03,Y04,Y05,Y06,Y07,Y08,Y09,Y871"
+,x,Partially-attributable acute,Other intentional injuries,Y35
+x,,Respiratory,Obstructive sleep apnoea,G473
+x,x,Respiratory,Influenza (microbiologically confirmed),"J09,J10"
+x,x,Respiratory,Influenza (clinically diagnosed),J11
+x,x,Respiratory,Pneumonia,"J12,J13,J14,J15,J16,J17,J18"
+x,,Respiratory,Chronic obstructive pulmonary disease,"J40,J41,J42,J43,J44,J47"
+x,,Respiratory,Asthma,"J45,J46"
+x,,Respiratory,Idiopathic pulmonary fibrosis,J841
+,x,Wholly attributable to alcohol,Alcohol-induced pseudo-Cushing's syndrome,E244
+,x,Wholly attributable to alcohol,Acute intoxication,F100
+,x,Wholly attributable to alcohol,Mental and behavioural disorders due to use of alcohol,"F101,F102,F103,F104,F105,F106,F107,F108,F109,F10X"
+,x,Wholly attributable to alcohol,Degeneration,G312
+,x,Wholly attributable to alcohol,Alcoholic polyneuropathy,G621
+,x,Wholly attributable to alcohol,Alcoholic myopathy,G721
+,x,Wholly attributable to alcohol,Alcoholic cardiomyopathy,I426
+,x,Wholly attributable to alcohol,Alcoholic gastritis,K292
+,x,Wholly attributable to alcohol,Alcoholic liver disease,"K700,K701,K702,K703,K704,K709,K70X"
+,x,Wholly attributable to alcohol,Acute pancreatitis (alcohol induced),K852
+,x,Wholly attributable to alcohol,Chronic pancreatitis (alcohol induced),K860
+,x,Wholly attributable to alcohol,Maternal care for suspected damage to foetus from alcohol,O354
+,x,Wholly attributable to alcohol,Excessive blood level of alcohol,R780
+,x,Wholly attributable to alcohol,Toxic effect of alcohol,"T510,T511,T518,T519"
+,x,Wholly attributable to alcohol,Alcohol poisoning,"X45,X65,Y15"
+,x,Wholly attributable to alcohol,Evidence of alcohol involvement determined by blood alcohol level,Y90
+x,,Wholly attributable to tobacco or nicotine product use,Mental and behavioural disorders due to use of tobacco,F17
+x,,Wholly attributable to tobacco or nicotine product use,Toxic effect of tobacco and nicotine,T652
+x,,Wholly attributable to tobacco or nicotine product use,Vaping-related disorder,U070
