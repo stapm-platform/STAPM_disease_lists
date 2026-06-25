@@ -33,7 +33,7 @@ x,,Mental health,Psychosis,"F28,F29"
 x,,Mental health,Depression,"F32,F33"
 x,,Mental health,Bulimia,F502
 x,x,Mental health,Alzheimers_disease,G30
-,x,Other,Tuberculosis,"A15,A16,A17,A18,A19"
+x,x,Other,Tuberculosis,"A15,A16,A17,A18,A19"
 x,x,Other,Diabetes (type II),E11
 x,,Other,Parkinson's disease,G20
 x,,Other,Multiple sclerosis,G35

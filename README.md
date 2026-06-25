@@ -1,6 +1,6 @@
 # STAPM Disease List
 
-The canonical list of health conditions used in the **Sheffield Tobacco and
+The list of health conditions used in the **Sheffield Tobacco and
 Alcohol Policy Model (STAPM)**, with their ICD-10 code definitions and the
 exposure(s) — tobacco and/or alcohol — each condition is attributable to, plus
 R code that validates the list and renders it to a formatted Word document.
@@ -128,10 +128,7 @@ Two versions are currently in the repository:
 - **v2.0.0** — current. 94 conditions. Passes validation with no ICD-10
   overlaps.
 - **v1.0.0** — the list published in 2022 (also on OSF, see above). 85 rows /
-  84 conditions, in its original category structure. The validator reports one
-  "overlap" on v1.0.0 — oesophageal adenocarcinoma and squamous cell carcinoma
-  both map to C15 by design (same code, different risk functions), so this is
-  expected, not a fault.
+  84 conditions, in its original category structure.
 
 ## Proposing a change
 
