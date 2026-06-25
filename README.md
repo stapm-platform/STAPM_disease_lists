@@ -17,7 +17,7 @@ the conditions, their groupings, and their ICD-10 codes. It deliberately
 contains *no* risk functions.
 
 The relative risks and how they are applied stay in the
-[**tobalcepi**](https://stapm.github.io/tobalcepi/) R package, which computes
+[**tobalcepi**](https://github.com/stapm-platform/tobalcepi) R package, which computes
 the relative risks and population attributable fractions of diseases related to
 tobacco and alcohol. The split is:
 
@@ -138,7 +138,7 @@ Two versions are currently in the repository:
 1. Open an **issue** describing the change (condition, codes, source).
 2. Edit the CSV on a **branch**; small fixes can be made in the GitHub web
    editor. Update `CHANGELOG.md` under `[Unreleased]` in the same PR.
-3. Run the validator (or let CI run it) — it will flag any new ICD-10 overlap.
+3. The validator (in `R/disease_list.R`) will flag any new ICD-10 overlap.
 4. A maintainer reviews and merges. Changes that affect results are tagged as a
    new release and saved as a new `lists/` file.
 
